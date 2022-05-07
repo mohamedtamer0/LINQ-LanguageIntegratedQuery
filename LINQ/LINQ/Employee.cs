@@ -9,6 +9,18 @@ namespace LINQ
     class Employee
     {
 
+        public Employee()
+        {
+            _Child = new string[] { };
+        }
+
+        private string[] _Child;
+        public string[] Child
+        {
+            get { return _Child; }
+            set { _Child = value; }
+        }
+
         private int _Number;
         public int Number
         {
