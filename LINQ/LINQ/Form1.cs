@@ -210,18 +210,121 @@ namespace LINQ
             var sal = from emp in employees
                       select emp.Salary;
 
+            var salNoReapeat = sal.Distinct();
+
             lbx.Items.Clear();
-            foreach (var s in sal)
+            foreach (var s in salNoReapeat)
             {
                 lbx.Items.Add(s);
             }
             label1.Text = lbx.Items.Count.ToString();
-
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ShowAllSalary()
+        {
+            var sal = from emp in employees
+                      select emp.Salary;
+
+            lbx.Items.Clear();
+            foreach(var s in sal)
+            {
+                lbx.Items.Add(s);
+            }
+        }
+
+        private void btnSum_Click(object sender, EventArgs e)
+        {
+            ShowAllSalary();
+            var SalSum = (from emp in employees select emp.Salary).Sum();
+            label1.Text = SalSum + "";
+        }
+
+        private void btnAvg_Click(object sender, EventArgs e)
+        {
+            ShowAllSalary();
+            var SalSum = (from emp in employees select emp.Salary).Average();
+            label1.Text = SalSum + "";
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            ShowAllSalary();
+            var SalSum = (from emp in employees select emp.Salary).Min();
+            label1.Text = SalSum + "";
+        }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+            ShowAllSalary();
+            var SalSum = (from emp in employees select emp.Salary).Max();
+            label1.Text = SalSum + "";
+        }
+
+        private void btnAllAlias_Click(object sender, EventArgs e)
+        {
+            var r = from emps in employees
+                    select new
+                    {
+                        EmpNO = emps.Number,
+                        EmpName = emps.Name,
+                        EmpCity = emps.City,
+                        EmpSalary = emps.Salary
+                    };
+            lbx.Items.Clear();
+            foreach(var x in r)
+            {
+                lbx.Items.Add(x.EmpNO + " ; " + x.EmpName + " ; " + x.EmpCity + " ; " + x.EmpSalary);
+            }
+        }
+
+        private void btnFromDataSet_Click(object sender, EventArgs e)
+        {
+            DataTable tblEmp = new DataTable("emp");
+            tblEmp.Columns.Add("number", typeof(int));
+            tblEmp.Columns.Add("name");
+            tblEmp.Columns.Add("city");
+            tblEmp.Columns.Add("salary", typeof(int));
+
+            tblEmp.Rows.Add(111,  "Mohamed",  "Giza",  3500);
+            tblEmp.Rows.Add( 222,  "Ahmed",  "Cairo",  3500);
+            tblEmp.Rows.Add(333, Name = "Ali", "Giza",  3500);
+            tblEmp.Rows.Add(444, Name = "Osama","Cairo",8000);
+            tblEmp.Rows.Add(555,"Mohab","Giza", 7000);
+
+            DataSet ds = new DataSet("com");
+            ds.Tables.Add(tblEmp);
+
+            //var r = from emp in ds.Tables[0].AsEnumerable()
+            //        select new
+            //        {
+            //            Number = emp[0],
+            //            Name = emp[1],
+            //            City = emp[2],
+            //            Salary = emp[3]
+            //        };
+
+
+            var r = from emp in ds.Tables[0].AsEnumerable()
+                    where emp[1].ToString().Contains("A")
+                    orderby emp[0] descending
+                    select new
+                    {
+                        Number = emp[0],
+                        Name = emp[1],
+                        City = emp[2],
+                        Salary = emp[3]
+                    };
+
+            lbx.Items.Clear();
+            foreach(var x in r)
+            {
+                lbx.Items.Add(x.Number + " ; " + x.Name + " ; " + x.City + " ; " + x.Salary);
+            }
         }
     }
 }

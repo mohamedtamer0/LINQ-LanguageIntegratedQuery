@@ -38,6 +38,12 @@
             this.btnJoin2 = new System.Windows.Forms.Button();
             this.btnDistinct = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSum = new System.Windows.Forms.Button();
+            this.btnAvg = new System.Windows.Forms.Button();
+            this.btnMin = new System.Windows.Forms.Button();
+            this.btnMax = new System.Windows.Forms.Button();
+            this.btnAllAlias = new System.Windows.Forms.Button();
+            this.btnFromDataSet = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbx
@@ -150,11 +156,83 @@
             this.label1.Text = "0";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // btnSum
+            // 
+            this.btnSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSum.Location = new System.Drawing.Point(633, 23);
+            this.btnSum.Name = "btnSum";
+            this.btnSum.Size = new System.Drawing.Size(167, 35);
+            this.btnSum.TabIndex = 10;
+            this.btnSum.Text = "Sum";
+            this.btnSum.UseVisualStyleBackColor = true;
+            this.btnSum.Click += new System.EventHandler(this.btnSum_Click);
+            // 
+            // btnAvg
+            // 
+            this.btnAvg.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAvg.Location = new System.Drawing.Point(633, 64);
+            this.btnAvg.Name = "btnAvg";
+            this.btnAvg.Size = new System.Drawing.Size(167, 35);
+            this.btnAvg.TabIndex = 11;
+            this.btnAvg.Text = "Avg";
+            this.btnAvg.UseVisualStyleBackColor = true;
+            this.btnAvg.Click += new System.EventHandler(this.btnAvg_Click);
+            // 
+            // btnMin
+            // 
+            this.btnMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMin.Location = new System.Drawing.Point(633, 105);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(167, 35);
+            this.btnMin.TabIndex = 12;
+            this.btnMin.Text = "Min";
+            this.btnMin.UseVisualStyleBackColor = true;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
+            // 
+            // btnMax
+            // 
+            this.btnMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMax.Location = new System.Drawing.Point(633, 146);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(167, 35);
+            this.btnMax.TabIndex = 13;
+            this.btnMax.Text = "Max";
+            this.btnMax.UseVisualStyleBackColor = true;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
+            // btnAllAlias
+            // 
+            this.btnAllAlias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAllAlias.Location = new System.Drawing.Point(633, 187);
+            this.btnAllAlias.Name = "btnAllAlias";
+            this.btnAllAlias.Size = new System.Drawing.Size(167, 35);
+            this.btnAllAlias.TabIndex = 14;
+            this.btnAllAlias.Text = "AllData+Alias";
+            this.btnAllAlias.UseVisualStyleBackColor = true;
+            this.btnAllAlias.Click += new System.EventHandler(this.btnAllAlias_Click);
+            // 
+            // btnFromDataSet
+            // 
+            this.btnFromDataSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFromDataSet.Location = new System.Drawing.Point(633, 228);
+            this.btnFromDataSet.Name = "btnFromDataSet";
+            this.btnFromDataSet.Size = new System.Drawing.Size(167, 35);
+            this.btnFromDataSet.TabIndex = 15;
+            this.btnFromDataSet.Text = "From DataSet";
+            this.btnFromDataSet.UseVisualStyleBackColor = true;
+            this.btnFromDataSet.Click += new System.EventHandler(this.btnFromDataSet_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1056, 455);
+            this.Controls.Add(this.btnFromDataSet);
+            this.Controls.Add(this.btnAllAlias);
+            this.Controls.Add(this.btnMax);
+            this.Controls.Add(this.btnMin);
+            this.Controls.Add(this.btnAvg);
+            this.Controls.Add(this.btnSum);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDistinct);
             this.Controls.Add(this.btnJoin2);
@@ -184,6 +262,12 @@
         private System.Windows.Forms.Button btnJoin2;
         private System.Windows.Forms.Button btnDistinct;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSum;
+        private System.Windows.Forms.Button btnAvg;
+        private System.Windows.Forms.Button btnMin;
+        private System.Windows.Forms.Button btnMax;
+        private System.Windows.Forms.Button btnAllAlias;
+        private System.Windows.Forms.Button btnFromDataSet;
     }
 }
 
