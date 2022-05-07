@@ -18,14 +18,24 @@ namespace LINQ
         }
 
 
-        Employee[] employees =
-{
+        Employee[] employees = {
                 new Employee() {Number = 1, Name="Mohamed",City="Giza", Salary = 3500, Child = new string[] { "omar","amr"} },
                 new Employee() {Number = 2, Name="Ahmed",City="Cairo", Salary = 3500, Child = new string[] { "habiba","amr"} },
                 new Employee() {Number = 3, Name="Ali",City="Giza", Salary = 3500, Child = new string[] { "omar","tamer"} },
                 new Employee() {Number = 4, Name="Osama",City="Cairo", Salary = 8000},
                 new Employee() {Number = 5, Name="Mohab",City="Giza", Salary = 7000, Child = new string[] { "joo","amr"} },
             };
+
+        Phones[] phones =
+        {
+            new Phones() {Number =1 , Phone = "123456789" },
+            new Phones() {Number =2 , Phone = "345345345" },
+            new Phones() {Number =3 , Phone = "543453453" },
+            new Phones() {Number =4 , Phone = "543452342" },
+            new Phones() {Number =5 , Phone = "575675675" },
+        };
+
+
 
 
         private void lbx_SelectedIndexChanged(object sender, EventArgs e)
@@ -156,10 +166,24 @@ namespace LINQ
                          from childs in emps.Child
                          select childs;
 
-
+            lbx.Items.Clear();
             foreach (var x in nested)
             {
                 lbx.Items.Add(x);
+            }
+        }
+
+        private void btnJoin_Click(object sender, EventArgs e)
+        {
+            var tel = from emps in employees
+                      join tels in phones
+                      on emps.Number equals tels.Number
+                      select tels;
+            lbx.Items.Clear();
+
+            foreach (var x in tel)
+            {
+                lbx.Items.Add(x.Number + " >> " + x.Phone);
             }
         }
     }
