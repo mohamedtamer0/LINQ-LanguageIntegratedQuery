@@ -44,6 +44,8 @@
             this.btnMax = new System.Windows.Forms.Button();
             this.btnAllAlias = new System.Windows.Forms.Button();
             this.btnFromDataSet = new System.Windows.Forms.Button();
+            this.btnLambda = new System.Windows.Forms.Button();
+            this.btnSelectMany = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbx
@@ -222,11 +224,35 @@
             this.btnFromDataSet.UseVisualStyleBackColor = true;
             this.btnFromDataSet.Click += new System.EventHandler(this.btnFromDataSet_Click);
             // 
+            // btnLambda
+            // 
+            this.btnLambda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLambda.Location = new System.Drawing.Point(633, 269);
+            this.btnLambda.Name = "btnLambda";
+            this.btnLambda.Size = new System.Drawing.Size(167, 35);
+            this.btnLambda.TabIndex = 16;
+            this.btnLambda.Text = "Lambda";
+            this.btnLambda.UseVisualStyleBackColor = true;
+            this.btnLambda.Click += new System.EventHandler(this.btnLambda_Click);
+            // 
+            // btnSelectMany
+            // 
+            this.btnSelectMany.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectMany.Location = new System.Drawing.Point(633, 310);
+            this.btnSelectMany.Name = "btnSelectMany";
+            this.btnSelectMany.Size = new System.Drawing.Size(167, 35);
+            this.btnSelectMany.TabIndex = 17;
+            this.btnSelectMany.Text = "Select Many";
+            this.btnSelectMany.UseVisualStyleBackColor = true;
+            this.btnSelectMany.Click += new System.EventHandler(this.btnSelectMany_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1056, 455);
+            this.Controls.Add(this.btnSelectMany);
+            this.Controls.Add(this.btnLambda);
             this.Controls.Add(this.btnFromDataSet);
             this.Controls.Add(this.btnAllAlias);
             this.Controls.Add(this.btnMax);
@@ -268,6 +294,8 @@
         private System.Windows.Forms.Button btnMax;
         private System.Windows.Forms.Button btnAllAlias;
         private System.Windows.Forms.Button btnFromDataSet;
+        private System.Windows.Forms.Button btnLambda;
+        private System.Windows.Forms.Button btnSelectMany;
     }
 }
 

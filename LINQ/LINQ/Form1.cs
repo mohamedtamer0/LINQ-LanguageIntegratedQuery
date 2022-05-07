@@ -65,8 +65,10 @@ namespace LINQ
             //    lbx.Items.Add(x);
             //}
 
-            var r = from emps in employees select new { emps.Number , emps.Name};
-            lbx.Items.Clear();
+            //var r = from emps in employees select new { emps.Number , emps.Name};
+            //lbx.Items.Clear();
+
+            var r = employees.Select(emp => emp);
 
             foreach (var x in r)
             {
@@ -97,8 +99,12 @@ namespace LINQ
             //}
 
 
-            var wer = from emps in employees where emps.Name.Contains("A") select emps;
-            lbx.Items.Clear();
+            //var wer = from emps in employees where emps.Name.Contains("A") select emps;
+            //lbx.Items.Clear();
+
+            //var wer = employees.Where(emp => emp.Name.Contains("A")).Select(emp => emp);
+
+            var wer = employees.Select(emp => emp).Where(emp => emp.Name.StartsWith("A"));
 
             foreach (var x in wer)
             {
@@ -162,7 +168,7 @@ namespace LINQ
 
 
             var nested = from emps in employees
-                         where emps.Name == "Mohamed"
+                         where emps.Name == "Osama"
                          from childs in emps.Child
                          select childs;
 
@@ -299,19 +305,7 @@ namespace LINQ
             DataSet ds = new DataSet("com");
             ds.Tables.Add(tblEmp);
 
-            //var r = from emp in ds.Tables[0].AsEnumerable()
-            //        select new
-            //        {
-            //            Number = emp[0],
-            //            Name = emp[1],
-            //            City = emp[2],
-            //            Salary = emp[3]
-            //        };
-
-
             var r = from emp in ds.Tables[0].AsEnumerable()
-                    where emp[1].ToString().Contains("A")
-                    orderby emp[0] descending
                     select new
                     {
                         Number = emp[0],
@@ -320,10 +314,58 @@ namespace LINQ
                         Salary = emp[3]
                     };
 
+
+            //var r = from emp in ds.Tables[0].AsEnumerable()
+            //        where emp[1].ToString().Contains("A")
+            //        orderby emp[0] descending
+            //        select new
+            //        {
+            //            Number = emp[0],
+            //            Name = emp[1],
+            //            City = emp[2],
+            //            Salary = emp[3]
+            //        };
+
             lbx.Items.Clear();
             foreach(var x in r)
             {
                 lbx.Items.Add(x.Number + " ; " + x.Name + " ; " + x.City + " ; " + x.Salary);
+            }
+        }
+
+        delegate void Hello();
+        delegate void SayHello(string name);
+        delegate int Calc(int num1, int num2);
+        private void btnLambda_Click(object sender, EventArgs e)
+        {
+            Hello h1 = () => MessageBox.Show("Hello 1");
+            //h1();
+
+            Hello h2 = () =>
+            {
+                MessageBox.Show("Hello 1");
+                MessageBox.Show("Hello 2");
+                MessageBox.Show("Hello 3");
+            };
+            //h2();
+
+            SayHello h3 = (myname) => MessageBox.Show("Hello " + myname);
+            //h3("Mohamed");
+
+
+            Calc cAdd = (num1, num2) => num1 + num2;
+
+            int i1 = cAdd(5, 7);
+            MessageBox.Show(i1+"");
+        }
+
+        private void btnSelectMany_Click(object sender, EventArgs e)
+        {
+            var r = employees.SelectMany(emp => emp.Child);
+            lbx.Items.Clear();
+            foreach(var x in r)
+            {
+                lbx.Items.Add(x);
             }
         }
     }
