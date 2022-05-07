@@ -1,0 +1,29 @@
+# LINQ-LanguageIntegratedQuery
+
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 001 - Linq from select all Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 002 - Linq from select new many Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 003 - Linq from where select Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 004 - Linq from orderby select Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 005 - Linq from group by Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 006 - Linq nested query from from Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 007 - Linq join on equals from select Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 008 - Linq join into on equals Database
+- [X] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 009 - Linq distinct Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 010 - Linq Sum Average Min Max Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 011 - Linq Alias Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 012 - Linq To DataSet or DataTable Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 013 - Linq Query Syntax Method Syntax Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 014 - Linq Lambda Expression Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 015 - Linq Method Syntax Select Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 016 - Linq Method Syntax Select Many Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 017 - Linq Method Syntax Where Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 018 - Linq Method Syntax OrderBy OrderByDescending Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 019 - Linq Method Syntax GroupBy OrderBy Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 020 - Linq Method Syntax join Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 021 - Linq Method Syntax join all Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 022 - Linq Query Syntax Method Syntax Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 023 - Linq Union Query Method Syntax Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 024 - Linq Union Method Syntax Array Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 025 - Linq Union Intersect Except Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 026 - Linq DataTable into new DataTable Database
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+)  - 027 - Linq LINQ TO SQL Server Database
