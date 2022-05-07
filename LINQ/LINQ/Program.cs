@@ -1,23 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace LINQ
 {
-    class Program
+    static class Program
     {
-        static bool IsEven(int num)
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            return num % 2 == 0;
-        }
-
-
-        static void Main(string[] args)
-        {
-            List<int> list = new List<int> { 1,2,3,4,5,6,7,8,9};
-
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new frmLinqTest());
         }
     }
 }
