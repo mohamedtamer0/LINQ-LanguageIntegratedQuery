@@ -16,7 +16,7 @@ namespace LINQ
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLinqTest());
+            Application.Run(new Form1());
         }
     }
 }

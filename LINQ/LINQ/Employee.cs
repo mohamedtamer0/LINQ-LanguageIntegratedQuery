@@ -8,6 +8,7 @@ namespace LINQ
 {
     class Employee
     {
+
         private int _Number;
         public int Number
         {
@@ -37,7 +38,5 @@ namespace LINQ
             get { return _Salary; }
             set { _Salary = value; }
         }
-
-
     }
 }
