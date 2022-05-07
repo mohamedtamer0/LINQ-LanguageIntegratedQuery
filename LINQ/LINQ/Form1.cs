@@ -186,5 +186,42 @@ namespace LINQ
                 lbx.Items.Add(x.Number + " >> " + x.Phone);
             }
         }
+
+        private void btnJoin2_Click(object sender, EventArgs e)
+        {
+            var tel = from emps in employees
+                      join tels in phones
+                      on emps.Number equals tels.Number into phoneData
+                      select new { emps , phoneData};
+            lbx.Items.Clear();
+
+            foreach (var x in tel)
+            {
+                lbx.Items.Add(x.emps.Name);
+                foreach (var y in x.phoneData)
+                {
+                    lbx.Items.Add("     " + y.Phone);
+                }
+            }
+        }
+
+        private void btnDistinct_Click(object sender, EventArgs e)
+        {
+            var sal = from emp in employees
+                      select emp.Salary;
+
+            lbx.Items.Clear();
+            foreach (var s in sal)
+            {
+                lbx.Items.Add(s);
+            }
+            label1.Text = lbx.Items.Count.ToString();
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

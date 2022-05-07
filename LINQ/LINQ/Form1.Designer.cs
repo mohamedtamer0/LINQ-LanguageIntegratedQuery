@@ -35,6 +35,9 @@
             this.btnGroup = new System.Windows.Forms.Button();
             this.btnNestedQ = new System.Windows.Forms.Button();
             this.btnJoin = new System.Windows.Forms.Button();
+            this.btnJoin2 = new System.Windows.Forms.Button();
+            this.btnDistinct = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbx
@@ -42,7 +45,7 @@
             this.lbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbx.FormattingEnabled = true;
             this.lbx.ItemHeight = 24;
-            this.lbx.Location = new System.Drawing.Point(12, 12);
+            this.lbx.Location = new System.Drawing.Point(12, 53);
             this.lbx.Name = "lbx";
             this.lbx.Size = new System.Drawing.Size(424, 316);
             this.lbx.TabIndex = 0;
@@ -114,11 +117,47 @@
             this.btnJoin.UseVisualStyleBackColor = true;
             this.btnJoin.Click += new System.EventHandler(this.btnJoin_Click);
             // 
+            // btnJoin2
+            // 
+            this.btnJoin2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJoin2.Location = new System.Drawing.Point(460, 264);
+            this.btnJoin2.Name = "btnJoin2";
+            this.btnJoin2.Size = new System.Drawing.Size(167, 35);
+            this.btnJoin2.TabIndex = 7;
+            this.btnJoin2.Text = "Join2";
+            this.btnJoin2.UseVisualStyleBackColor = true;
+            this.btnJoin2.Click += new System.EventHandler(this.btnJoin2_Click);
+            // 
+            // btnDistinct
+            // 
+            this.btnDistinct.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDistinct.Location = new System.Drawing.Point(460, 306);
+            this.btnDistinct.Name = "btnDistinct";
+            this.btnDistinct.Size = new System.Drawing.Size(167, 35);
+            this.btnDistinct.TabIndex = 8;
+            this.btnDistinct.Text = "distinct";
+            this.btnDistinct.UseVisualStyleBackColor = true;
+            this.btnDistinct.Click += new System.EventHandler(this.btnDistinct_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(20, 24);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "0";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1056, 455);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnDistinct);
+            this.Controls.Add(this.btnJoin2);
             this.Controls.Add(this.btnJoin);
             this.Controls.Add(this.btnNestedQ);
             this.Controls.Add(this.btnGroup);
@@ -129,6 +168,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -141,6 +181,9 @@
         private System.Windows.Forms.Button btnGroup;
         private System.Windows.Forms.Button btnNestedQ;
         private System.Windows.Forms.Button btnJoin;
+        private System.Windows.Forms.Button btnJoin2;
+        private System.Windows.Forms.Button btnDistinct;
+        private System.Windows.Forms.Label label1;
     }
 }
 
